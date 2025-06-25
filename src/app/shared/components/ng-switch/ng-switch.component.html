@@ -1,0 +1,53 @@
+
+<div class="row" style="background-color: orangered;">
+    <div class="col-md-6 offset-3">
+        
+<ul class="nav nav-pills">
+    <li
+    (click)="selecetdSkill=skill.skillName"
+    class="nav-item" *ngFor="let skill of tabsArr">
+        <a 
+        [ngClass]="{
+            active:selecetdSkill.includes(skill.skillName)
+        }"
+        href="javscript:;" class="nav-link">
+
+            {{skill.skillName|titlecase}}
+        </a>
+    </li>
+</ul>
+
+<div class="card" [ngSwitch]="selecetdSkill">
+    <div class="card-body" *ngSwitchCase="'html'">
+        <strong>Html</strong>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi recusandae repellendus nisi aliquid harum tempore blanditiis dolorum obcaecati placeat, vel voluptates labore neque odio, cupiditate doloremque. Magni, placeat quos!
+        </p>
+    </div>
+
+<div class="card" [ngSwitch]="selecetdSkill">
+    <div class="card-body" *ngSwitchCase="'css'">
+        <strong>Css</strong>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi recusandae repellendus nisi aliquid harum tempore blanditiis dolorum obcaecati placeat, vel voluptates labore neque odio, cupiditate doloremque. Magni, placeat quos!
+        </p>
+    </div>
+   
+</div>
+<div class="card" [ngSwitch]="selecetdSkill">
+    <div class="card-body" *ngSwitchCase="'js'">
+        <strong>Js</strong>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi recusandae repellendus nisi aliquid harum tempore blanditiis dolorum obcaecati placeat, vel voluptates labore neque odio, cupiditate doloremque. Magni, placeat quos!
+        </p>
+    </div>
+    </div>
+
+<div class="card" [ngSwitch]="selecetdSkill">
+    <div class="card-body" *ngSwitchCase="'angular'">
+        <strong>Angular</strong>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi recusandae repellendus nisi aliquid harum tempore blanditiis dolorum obcaecati placeat, vel voluptates labore neque odio, cupiditate doloremque. Magni, placeat quos!
+        </p>
+    </div>
+</div>

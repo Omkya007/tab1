@@ -1,0 +1,26 @@
+
+<div class="row" style="background-color: orangered;">
+    <div class="col-md-6 offset-3">
+        <ul class="nav nav-pills">
+    <li 
+    (click)="selectedSkill =skill.skillName"
+    class="nav-item" *ngFor="let skill of tabsArr">
+        <a 
+        [ngClass]="{
+            active:selectedSkill.toLowerCase().includes(skill.skillName)
+        }"
+        href="javascript:;" class="nav-link">
+            {{skill.skillName |titlecase}}
+        </a>
+    </li>
+</ul>
+
+    <ng-container *ngFor="let skill of tabsArr">
+        <div class="card" *ngIf="selectedSkill.includes(skill.skillName)">
+        <div class="card-body" [innerHTML]="skill.skillInfo">
+            
+        </div>
+    </div>
+    </ng-container>
+    </div>
+</div>

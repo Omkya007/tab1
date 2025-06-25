@@ -1,0 +1,80 @@
+
+<div class="row" style="background-color: orangered;">
+    <div class="col-md-6 offset-3">
+        <ul class="nav nav-pills">
+    <li 
+    (click)="onTab('html')"
+    class="nav-item">
+        <a 
+        [ngClass]="{
+            active:selectedSkill.toLowerCase().includes('html')
+        }"
+        href="javascript:;" class="nav-link">
+            Html
+        </a>
+    </li>
+    <li 
+    (click)="selectedSkill='css'"
+    class="nav-item">
+        <a
+        [ngClass]="{
+            active:selectedSkill.toLowerCase().includes('css')
+        }"
+        href="javascript:;" class="nav-link">
+            Css
+        </a>
+    </li>
+    <li 
+    (click)="selectedSkill='js'"
+    class="nav-item">
+        <a
+        [ngClass]="{
+            active:selectedSkill.toLowerCase().includes('js')
+        }"
+        href="javascript:;" class="nav-link">
+            Js
+        </a>
+    </li>
+    <li 
+    (click)="onTab('angular')"
+    class="nav-item">
+        <a 
+        [ngClass]="{
+            active:selectedSkill.toLowerCase().includes('angular')
+        }"
+        href="javascript:;" class="nav-link">
+           Angular
+        </a>
+    </li>
+</ul>
+
+    <div class="card" *ngIf="selectedSkill.toLowerCase().includes('html')">
+        <div class="card-body">
+            <strong>Html</strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas fugiat, quam sit tempora repellendus molestias.</p>
+        </div>
+        
+    </div>
+    <div class="card" *ngIf="selectedSkill.toLowerCase().includes('css')">
+        <div class="card-body">
+            <strong>Css</strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas fugiat, quam sit tempora repellendus molestias.</p>
+        </div>
+        
+    </div>
+    <div class="card" *ngIf="selectedSkill.toLowerCase().includes('js')">
+        <div class="card-body">
+            <strong>Js</strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas fugiat, quam sit tempora repellendus molestias.</p>
+        </div>
+        
+    </div>
+    <div class="card" *ngIf="selectedSkill.toLowerCase().includes('angular')">
+        <div class="card-body">
+            <strong>Angular</strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas fugiat, quam sit tempora repellendus molestias.</p>
+        </div>
+        
+    </div>
+    </div>
+</div>
